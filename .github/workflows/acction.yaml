@@ -19,6 +19,7 @@ jobs:
                     echo "✅ El archivo modo-dia.txt existe."
                 else 
                     echo "❌ ERROR: Falta el archivo crítico modo-dia.txt"
+                    exit 1; # <--- para que el acction sepongo rojo
                 fi
             - name: Finish
               run: echo "the acction was succesfull"
