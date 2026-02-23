@@ -1,5 +1,5 @@
 name: lab 01 valida archivo
-run-name: Executed by @${{ github.actor }} Event ${{ github.event_name }} in branch ${{ github.path }}
+run-name: Executed by @${{ github.actor }} Event ${{ github.event_name }} 
 
 on:
     push:
