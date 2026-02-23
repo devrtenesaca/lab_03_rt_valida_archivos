@@ -1,0 +1,24 @@
+name: lab 01 valida archivo
+on:
+    push:
+        branches: [master]
+jobs:
+    verificacion: # the name of jobs
+        runs-on: ubuntu-latest # runners
+
+        steps:
+            - name: Download the code
+              uses: actions/checkout@v6
+
+            - name: Start grettings
+              run: echo "iniciando validacion de archivos"
+
+            - name: checking if the file exist
+              run: |
+                if [-f "archivo.txt"]; then
+                    echo "✅ El archivo modo-dia.txt existe."
+                else 
+                    echo "❌ ERROR: Falta el archivo crítico modo-dia.txt"
+                fi
+            - name: Finish
+              run: echo "the acction was succesfull"
