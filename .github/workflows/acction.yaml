@@ -15,7 +15,7 @@ jobs:
 
             - name: checking if the file exist
               run: |
-                if [-f "archivo.txt"]; then
+                if [-f "modo-dia.txt"]; then
                     echo "✅ El archivo modo-dia.txt existe."
                 else 
                     echo "❌ ERROR: Falta el archivo crítico modo-dia.txt"
