@@ -8,14 +8,14 @@ jobs:
 
         steps:
             - name: Download the code
-              uses: actions/checkout@v6
+              uses: actions/checkout@v4
 
             - name: Start grettings
               run: echo "iniciando validacion de archivos"
 
             - name: checking if the file exist
               run: |
-                if [-f "modo-dia.txt"]; then
+                if [ -f "modo-dia.txt" ]; then
                     echo "✅ El archivo modo-dia.txt existe."
                 else 
                     echo "❌ ERROR: Falta el archivo crítico modo-dia.txt"
