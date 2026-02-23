@@ -15,10 +15,16 @@ jobs:
         steps:
             - name: Download the code
               uses: actions/checkout@v4
+            
+            - name: Context informtion
+              run: |
+                echo "--- INFO FROM EVENT ---"
+                echo "User: ${{ github.actor }}"
+                echo "Event: ${{ github.event_name }}"
+                echo "Curret branch: ${{ github.ref }}"
+                echo "Repository: ${{ github.repository }}"
 
-            - name: Start grettings
-              run: echo "iniciando validacion de archivos"
-
+  
             - name: checking if the file exist
               run: |
                 if [ -f "modo-dia.txt" ]; then
